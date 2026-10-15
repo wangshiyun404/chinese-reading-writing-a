@@ -1,0 +1,20 @@
+#penCanvas { position:absolute; inset:0; width:100%; height:100%; z-index:5; pointer-events:none; touch-action:none; }
+#penCanvas[data-active="true"] { pointer-events:auto; cursor:crosshair; }
+#penCanvas[data-tool="erase"] { cursor:cell; }
+#penToggle[aria-pressed="true"] { background:#f0c483; color:#243c2e; border-color:#f0c483; font-weight:700; }
+#penTools { display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; flex:0 0 auto; padding:8px 16px; background:#e7efe9; color:#213c2b; border-top:1px solid #abc2b2; z-index:6; }
+.pen-group { display:flex; align-items:center; gap:4px; }
+#penTools button { min-height:34px; padding:5px 10px; border:1px solid #a5b8aa; border-radius:6px; white-space:nowrap; background:#fff; color:#294332; }
+#penTools button:hover { background:#d3e5d9; }
+#penTools button[aria-pressed="true"]:not(.pen-color) { color:#fff; background:#276344; border-color:#276344; }
+#penTools button:disabled { opacity:.4; cursor:default; }
+#penTools .pen-color { width:30px; height:30px; min-height:30px; padding:0; border:5px solid #fff; border-radius:50%; background:var(--pen-color); box-shadow:0 0 0 1px #bcc9bf; }
+#penTools .pen-color[aria-pressed="true"] { outline:2px solid #345e45; outline-offset:2px; }
+#penTools button:focus-visible { outline:3px solid #1c5fa7; outline-offset:3px; }
+.pen-colors { gap:9px; padding:0 3px; }
+.pen-hint { font-size:12px; line-height:1.45; color:#4f6e5a; }
+#penTools #penDone { margin-left:auto; background:#276344; color:#fff; border-color:#276344; }
+body.fs.idle #penTools,body.fs.idle #penTools * { cursor:auto; }
+body.fs.idle #penTools button { cursor:pointer; }
+@media(max-width:1050px) { .pen-hint { display:none; } #penTools { gap:8px; padding:8px 10px; } }
+@media(max-width:700px) { #penTools { gap:8px 12px; padding:8px 10px; } #penTools button { padding:5px 8px; font-size:13px; } #penTools .pen-color { width:26px; height:26px; min-height:26px; border-width:4px; } .pen-colors { gap:8px; } }
