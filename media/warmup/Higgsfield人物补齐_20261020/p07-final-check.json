@@ -1,0 +1,20 @@
+{
+  "id": 7,
+  "title": "白石塔",
+  "framesDecoded": 307,
+  "fps": 25.0,
+  "duration": 12.28,
+  "voiceDuration": 12.2775625,
+  "audioLagSeconds": 0.0,
+  "audioCorrelation": 0.9999938607215881,
+  "syncnetOffsetFrames25fps": 0,
+  "syncnetConfidence": 7.86338472366333,
+  "syncnetDistance": 7.720080852508545,
+  "syncnetCropBox": [
+    147,
+    212,
+    175,
+    175
+  ],
+  "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme."
+}

@@ -1,0 +1,20 @@
+{
+  "voiceApproved": true,
+  "voiceApproval": "自然、合适",
+  "fallbackApproved": true,
+  "fallback": "5则使用自然配音＋情景配图，明确标注人物视频待完成",
+  "avatarReady": [
+    1,
+    2,
+    5
+  ],
+  "avatarPending": [
+    3,
+    4,
+    6,
+    7,
+    8
+  ],
+  "failureReason": "AVATAR_IV_VIDEO_GENERATION_OUT_OF_CREDIT",
+  "noAutomaticRetry": true
+}

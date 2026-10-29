@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "naturalAudioClips": 8,
+  "lineAudio": 32,
+  "avatarReady": [
+    "四和十",
+    "吃葡萄",
+    "数青蛙"
+  ],
+  "avatarPending": [
+    "一二三四五",
+    "小老鼠",
+    "扁担和板凳",
+    "白石塔",
+    "盆和瓶"
+  ],
+  "captionSegments": 32,
+  "pageCount": 527,
+  "pageRevision": 5,
+  "originalsPreserved": true,
+  "verification": "All published file links and hashes, audio readability, original text invariants, JS syntax and media decoding checked; no new browser UI interaction check."
+}

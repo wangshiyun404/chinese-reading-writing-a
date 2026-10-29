@@ -1,0 +1,1457 @@
+[
+  {
+    "id": 1,
+    "title": "四和十",
+    "text": "四是四，\n十是十。\n十四是十四，\n四十是四十。",
+    "speech": {
+      "audio_url": "https://resource2.heygen.ai/text_to_speech/e47c29f4253f4aa0aa35d49ea6951a33/1803df59c37443789d2e4f71c82859a0/id=2e004d39-decd-4e13-b7e3-3bc467f97a1a.wav",
+      "duration": 6.948571428571428,
+      "request_id": null,
+      "word_timestamps": [
+        {
+          "word": "<start>",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "word": "四",
+          "start": 0.28,
+          "end": 0.54
+        },
+        {
+          "word": "是",
+          "start": 0.54,
+          "end": 0.82
+        },
+        {
+          "word": "四",
+          "start": 0.82,
+          "end": 0.82
+        },
+        {
+          "word": "，",
+          "start": 0.82,
+          "end": 0.82
+        },
+        {
+          "word": "十",
+          "start": 1.6,
+          "end": 1.94
+        },
+        {
+          "word": "是",
+          "start": 1.94,
+          "end": 1.94
+        },
+        {
+          "word": "十",
+          "start": 2.2,
+          "end": 2.2
+        },
+        {
+          "word": "。",
+          "start": 2.2,
+          "end": 2.2
+        },
+        {
+          "word": "十",
+          "start": 3.52,
+          "end": 3.76
+        },
+        {
+          "word": "四",
+          "start": 3.76,
+          "end": 4
+        },
+        {
+          "word": "是",
+          "start": 4,
+          "end": 4.2
+        },
+        {
+          "word": "十",
+          "start": 4.2,
+          "end": 4.2
+        },
+        {
+          "word": "四",
+          "start": 4.46,
+          "end": 4.46
+        },
+        {
+          "word": "，",
+          "start": 4.46,
+          "end": 4.46
+        },
+        {
+          "word": "四",
+          "start": 5.38,
+          "end": 5.62
+        },
+        {
+          "word": "十",
+          "start": 5.64,
+          "end": 5.86
+        },
+        {
+          "word": "是",
+          "start": 5.86,
+          "end": 6.08
+        },
+        {
+          "word": "四",
+          "start": 6.08,
+          "end": 6.36
+        },
+        {
+          "word": "十",
+          "start": 6.36,
+          "end": 6.36
+        },
+        {
+          "word": "。",
+          "start": 6.36,
+          "end": 6.36
+        },
+        {
+          "word": "<end>",
+          "start": 6.948571428571428,
+          "end": 6.948571428571428
+        }
+      ],
+      "engine": "starfish"
+    },
+    "segments": [
+      {
+        "line": 0,
+        "start": 0,
+        "end": 1.6
+      },
+      {
+        "line": 1,
+        "start": 1.6,
+        "end": 3.52
+      },
+      {
+        "line": 2,
+        "start": 3.52,
+        "end": 5.38
+      },
+      {
+        "line": 3,
+        "start": 5.38,
+        "end": 6.948571428571428
+      }
+    ],
+    "lineAudioCuts": [
+      0,
+      1.21,
+      2.8600000000000003,
+      4.92,
+      6.948571428571428
+    ]
+  },
+  {
+    "id": 2,
+    "title": "吃葡萄",
+    "text": "吃葡萄，\n不吐葡萄皮；\n不吃葡萄，\n倒吐葡萄皮。",
+    "speech": {
+      "audio_url": "https://resource2.heygen.ai/text_to_speech/e47c29f4253f4aa0aa35d49ea6951a33/1803df59c37443789d2e4f71c82859a0/id=fe43d428-4a94-49d8-9a5b-96d0596f8f4a.wav",
+      "duration": 7.026938775510204,
+      "request_id": null,
+      "word_timestamps": [
+        {
+          "word": "<start>",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "word": "吃",
+          "start": 0.52,
+          "end": 0.66
+        },
+        {
+          "word": "葡",
+          "start": 0.66,
+          "end": 0.86
+        },
+        {
+          "word": "萄",
+          "start": 0.86,
+          "end": 0.88
+        },
+        {
+          "word": "，",
+          "start": 0.88,
+          "end": 0.88
+        },
+        {
+          "word": "不",
+          "start": 1.64,
+          "end": 1.9
+        },
+        {
+          "word": "吐",
+          "start": 1.92,
+          "end": 2.24
+        },
+        {
+          "word": "葡",
+          "start": 2.24,
+          "end": 2.46
+        },
+        {
+          "word": "萄",
+          "start": 2.46,
+          "end": 2.76
+        },
+        {
+          "word": "皮",
+          "start": 2.76,
+          "end": 3.06
+        },
+        {
+          "word": "；",
+          "start": 3.06,
+          "end": 3.06
+        },
+        {
+          "word": "不",
+          "start": 3.68,
+          "end": 3.96
+        },
+        {
+          "word": "吃",
+          "start": 3.96,
+          "end": 4.26
+        },
+        {
+          "word": "葡",
+          "start": 4.26,
+          "end": 4.48
+        },
+        {
+          "word": "萄",
+          "start": 4.48,
+          "end": 4.48
+        },
+        {
+          "word": "，",
+          "start": 4.48,
+          "end": 4.48
+        },
+        {
+          "word": "倒",
+          "start": 5.22,
+          "end": 5.6
+        },
+        {
+          "word": "吐",
+          "start": 5.6,
+          "end": 5.98
+        },
+        {
+          "word": "葡",
+          "start": 5.98,
+          "end": 6.2
+        },
+        {
+          "word": "萄",
+          "start": 6.2,
+          "end": 6.48
+        },
+        {
+          "word": "皮",
+          "start": 6.48,
+          "end": 6.74
+        },
+        {
+          "word": "。",
+          "start": 6.74,
+          "end": 6.74
+        },
+        {
+          "word": "<end>",
+          "start": 7.026938775510204,
+          "end": 7.026938775510204
+        }
+      ],
+      "engine": "starfish"
+    },
+    "segments": [
+      {
+        "line": 0,
+        "start": 0,
+        "end": 1.64
+      },
+      {
+        "line": 1,
+        "start": 1.64,
+        "end": 3.68
+      },
+      {
+        "line": 2,
+        "start": 3.68,
+        "end": 5.22
+      },
+      {
+        "line": 3,
+        "start": 5.22,
+        "end": 7.026938775510204
+      }
+    ],
+    "lineAudioCuts": [
+      0,
+      1.26,
+      3.37,
+      4.85,
+      7.026938775510204
+    ]
+  },
+  {
+    "id": 3,
+    "title": "一二三四五",
+    "text": "一二三四五，\n上山打老虎。\n老虎没打到，\n打到小松鼠。",
+    "speech": {
+      "audio_url": "https://resource2.heygen.ai/text_to_speech/e47c29f4253f4aa0aa35d49ea6951a33/1803df59c37443789d2e4f71c82859a0/id=b467ca84-ce7a-4fd3-9c1f-c36db4fc33f9.wav",
+      "duration": 7.262040816326531,
+      "request_id": null,
+      "word_timestamps": [
+        {
+          "word": "<start>",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "word": "一",
+          "start": 0.34,
+          "end": 0.76
+        },
+        {
+          "word": "二",
+          "start": 0.76,
+          "end": 1.24
+        },
+        {
+          "word": "三",
+          "start": 1.24,
+          "end": 1.7
+        },
+        {
+          "word": "四",
+          "start": 1.72,
+          "end": 2.16
+        },
+        {
+          "word": "五",
+          "start": 2.16,
+          "end": 2.16
+        },
+        {
+          "word": "，",
+          "start": 2.16,
+          "end": 2.16
+        },
+        {
+          "word": "上",
+          "start": 2.94,
+          "end": 3.16
+        },
+        {
+          "word": "山",
+          "start": 3.16,
+          "end": 3.4
+        },
+        {
+          "word": "打",
+          "start": 3.4,
+          "end": 3.58
+        },
+        {
+          "word": "老",
+          "start": 3.58,
+          "end": 3.92
+        },
+        {
+          "word": "虎",
+          "start": 3.92,
+          "end": 4.1
+        },
+        {
+          "word": "。",
+          "start": 4.1,
+          "end": 4.1
+        },
+        {
+          "word": "老",
+          "start": 5.02,
+          "end": 5.2
+        },
+        {
+          "word": "虎",
+          "start": 5.2,
+          "end": 5.34
+        },
+        {
+          "word": "没",
+          "start": 5.34,
+          "end": 5.5
+        },
+        {
+          "word": "打",
+          "start": 5.5,
+          "end": 5.7
+        },
+        {
+          "word": "到",
+          "start": 5.7,
+          "end": 5.7
+        },
+        {
+          "word": "，",
+          "start": 5.7,
+          "end": 5.7
+        },
+        {
+          "word": "打",
+          "start": 6.02,
+          "end": 6.18
+        },
+        {
+          "word": "到",
+          "start": 6.18,
+          "end": 6.32
+        },
+        {
+          "word": "小",
+          "start": 6.32,
+          "end": 6.48
+        },
+        {
+          "word": "松",
+          "start": 6.48,
+          "end": 6.72
+        },
+        {
+          "word": "鼠",
+          "start": 6.72,
+          "end": 6.92
+        },
+        {
+          "word": "。",
+          "start": 6.92,
+          "end": 6.92
+        },
+        {
+          "word": "<end>",
+          "start": 7.262040816326531,
+          "end": 7.262040816326531
+        }
+      ],
+      "engine": "starfish"
+    },
+    "segments": [
+      {
+        "line": 0,
+        "start": 0,
+        "end": 2.94
+      },
+      {
+        "line": 1,
+        "start": 2.94,
+        "end": 5.02
+      },
+      {
+        "line": 2,
+        "start": 5.02,
+        "end": 6.02
+      },
+      {
+        "line": 3,
+        "start": 6.02,
+        "end": 7.262040816326531
+      }
+    ],
+    "lineAudioCuts": [
+      0,
+      2.55,
+      4.56,
+      5.859999999999999,
+      7.262040816326531
+    ]
+  },
+  {
+    "id": 4,
+    "title": "小老鼠",
+    "text": "小老鼠，上灯台，\n偷油吃，下不来。\n喵喵喵，猫来了，\n叽里咕噜滚下来。",
+    "speech": {
+      "audio_url": "https://resource2.heygen.ai/text_to_speech/e47c29f4253f4aa0aa35d49ea6951a33/1803df59c37443789d2e4f71c82859a0/id=52c85bb0-058b-4785-a4ce-ca07aafe01c1.wav",
+      "duration": 10.187755102040816,
+      "request_id": null,
+      "word_timestamps": [
+        {
+          "word": "<start>",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "word": "小",
+          "start": 0.4,
+          "end": 0.5
+        },
+        {
+          "word": "老",
+          "start": 0.5,
+          "end": 0.78
+        },
+        {
+          "word": "鼠",
+          "start": 0.78,
+          "end": 1.1
+        },
+        {
+          "word": "，",
+          "start": 1.1,
+          "end": 1.1
+        },
+        {
+          "word": "上",
+          "start": 1.56,
+          "end": 1.86
+        },
+        {
+          "word": "灯",
+          "start": 1.86,
+          "end": 2.08
+        },
+        {
+          "word": "台",
+          "start": 2.08,
+          "end": 2.46
+        },
+        {
+          "word": "，",
+          "start": 2.46,
+          "end": 2.46
+        },
+        {
+          "word": "偷",
+          "start": 2.94,
+          "end": 3.18
+        },
+        {
+          "word": "油",
+          "start": 3.18,
+          "end": 3.46
+        },
+        {
+          "word": "吃",
+          "start": 3.46,
+          "end": 3.48
+        },
+        {
+          "word": "，",
+          "start": 3.48,
+          "end": 3.48
+        },
+        {
+          "word": "下",
+          "start": 4.14,
+          "end": 4.42
+        },
+        {
+          "word": "不",
+          "start": 4.42,
+          "end": 4.52
+        },
+        {
+          "word": "来",
+          "start": 4.52,
+          "end": 4.82
+        },
+        {
+          "word": "。",
+          "start": 4.82,
+          "end": 4.82
+        },
+        {
+          "word": "喵",
+          "start": 5.58,
+          "end": 5.78
+        },
+        {
+          "word": "喵",
+          "start": 5.78,
+          "end": 6.02
+        },
+        {
+          "word": "喵",
+          "start": 6.02,
+          "end": 6.02
+        },
+        {
+          "word": "，",
+          "start": 6.02,
+          "end": 6.02
+        },
+        {
+          "word": "猫",
+          "start": 6.82,
+          "end": 7.04
+        },
+        {
+          "word": "来",
+          "start": 7.04,
+          "end": 7.3
+        },
+        {
+          "word": "了",
+          "start": 7.3,
+          "end": 7.3
+        },
+        {
+          "word": "，",
+          "start": 7.3,
+          "end": 7.3
+        },
+        {
+          "word": "叽",
+          "start": 7.94,
+          "end": 8.119
+        },
+        {
+          "word": "里",
+          "start": 8.119,
+          "end": 8.3
+        },
+        {
+          "word": "咕",
+          "start": 8.3,
+          "end": 8.48
+        },
+        {
+          "word": "噜",
+          "start": 8.48,
+          "end": 8.48
+        },
+        {
+          "word": "滚",
+          "start": 8.98,
+          "end": 9.24
+        },
+        {
+          "word": "下",
+          "start": 9.24,
+          "end": 9.5
+        },
+        {
+          "word": "来",
+          "start": 9.5,
+          "end": 9.5
+        },
+        {
+          "word": "。",
+          "start": 9.5,
+          "end": 9.5
+        },
+        {
+          "word": "<end>",
+          "start": 10.187755102040816,
+          "end": 10.187755102040816
+        }
+      ],
+      "engine": "starfish"
+    },
+    "segments": [
+      {
+        "line": 0,
+        "start": 0,
+        "end": 2.94
+      },
+      {
+        "line": 1,
+        "start": 2.94,
+        "end": 5.58
+      },
+      {
+        "line": 2,
+        "start": 5.58,
+        "end": 7.94
+      },
+      {
+        "line": 3,
+        "start": 7.94,
+        "end": 10.187755102040816
+      }
+    ],
+    "lineAudioCuts": [
+      0,
+      2.7,
+      5.2,
+      7.62,
+      10.187755102040816
+    ]
+  },
+  {
+    "id": 5,
+    "title": "数青蛙",
+    "speech": {
+      "audio_url": "https://resource2.heygen.ai/text_to_speech/e47c29f4253f4aa0aa35d49ea6951a33/1803df59c37443789d2e4f71c82859a0/id=ab7a2e9b-f5de-4b3c-9b2e-2bc441ce7a9e.wav",
+      "duration": 9.064489795918368,
+      "request_id": null,
+      "word_timestamps": [
+        {
+          "word": "<start>",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "word": "一",
+          "start": 0.32,
+          "end": 0.48
+        },
+        {
+          "word": "只",
+          "start": 0.48,
+          "end": 0.7
+        },
+        {
+          "word": "青",
+          "start": 0.72,
+          "end": 0.94
+        },
+        {
+          "word": "蛙",
+          "start": 0.94,
+          "end": 1.3
+        },
+        {
+          "word": "一",
+          "start": 1.3,
+          "end": 1.54
+        },
+        {
+          "word": "张",
+          "start": 1.54,
+          "end": 1.86
+        },
+        {
+          "word": "嘴",
+          "start": 1.86,
+          "end": 1.86
+        },
+        {
+          "word": "，",
+          "start": 1.86,
+          "end": 1.86
+        },
+        {
+          "word": "两",
+          "start": 2.54,
+          "end": 2.84
+        },
+        {
+          "word": "只",
+          "start": 2.84,
+          "end": 2.98
+        },
+        {
+          "word": "眼",
+          "start": 2.98,
+          "end": 3.24
+        },
+        {
+          "word": "睛",
+          "start": 3.24,
+          "end": 3.54
+        },
+        {
+          "word": "四",
+          "start": 3.54,
+          "end": 3.78
+        },
+        {
+          "word": "条",
+          "start": 3.78,
+          "end": 4.019
+        },
+        {
+          "word": "腿",
+          "start": 4.019,
+          "end": 4.04
+        },
+        {
+          "word": "。",
+          "start": 4.04,
+          "end": 4.04
+        },
+        {
+          "word": "两",
+          "start": 4.86,
+          "end": 5.16
+        },
+        {
+          "word": "只",
+          "start": 5.16,
+          "end": 5.36
+        },
+        {
+          "word": "青",
+          "start": 5.36,
+          "end": 5.58
+        },
+        {
+          "word": "蛙",
+          "start": 5.58,
+          "end": 5.86
+        },
+        {
+          "word": "两",
+          "start": 5.86,
+          "end": 6.16
+        },
+        {
+          "word": "张",
+          "start": 6.16,
+          "end": 6.44
+        },
+        {
+          "word": "嘴",
+          "start": 6.44,
+          "end": 6.44
+        },
+        {
+          "word": "，",
+          "start": 6.44,
+          "end": 6.44
+        },
+        {
+          "word": "四",
+          "start": 7.06,
+          "end": 7.32
+        },
+        {
+          "word": "只",
+          "start": 7.32,
+          "end": 7.48
+        },
+        {
+          "word": "眼",
+          "start": 7.48,
+          "end": 7.76
+        },
+        {
+          "word": "睛",
+          "start": 7.76,
+          "end": 8.08
+        },
+        {
+          "word": "八",
+          "start": 8.08,
+          "end": 8.32
+        },
+        {
+          "word": "条",
+          "start": 8.32,
+          "end": 8.58
+        },
+        {
+          "word": "腿",
+          "start": 8.58,
+          "end": 8.78
+        },
+        {
+          "word": "。",
+          "start": 8.78,
+          "end": 8.78
+        },
+        {
+          "word": "<end>",
+          "start": 9.064489795918368,
+          "end": 9.064489795918368
+        }
+      ],
+      "engine": "starfish"
+    },
+    "segments": [
+      {
+        "line": 0,
+        "start": 0,
+        "end": 2.54
+      },
+      {
+        "line": 1,
+        "start": 2.54,
+        "end": 4.86
+      },
+      {
+        "line": 2,
+        "start": 4.86,
+        "end": 7.06
+      },
+      {
+        "line": 3,
+        "start": 7.06,
+        "end": 9.064489795918368
+      }
+    ],
+    "lineAudioCuts": [
+      0,
+      2.2,
+      4.45,
+      6.75,
+      9.064489795918368
+    ]
+  },
+  {
+    "id": 6,
+    "title": "扁担和板凳",
+    "text": "扁担长，\n板凳宽。\n扁担没有板凳宽，\n板凳没有扁担长。",
+    "speech": {
+      "audio_url": "https://resource2.heygen.ai/text_to_speech/e47c29f4253f4aa0aa35d49ea6951a33/1803df59c37443789d2e4f71c82859a0/id=0aae6785-36a1-4da0-8c3c-9fdb2a94d972.wav",
+      "duration": 7.026938775510204,
+      "request_id": null,
+      "word_timestamps": [
+        {
+          "word": "<start>",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "word": "扁",
+          "start": 0.4,
+          "end": 0.5
+        },
+        {
+          "word": "担",
+          "start": 0.5,
+          "end": 0.76
+        },
+        {
+          "word": "长",
+          "start": 0.76,
+          "end": 0.78
+        },
+        {
+          "word": "，",
+          "start": 0.78,
+          "end": 0.78
+        },
+        {
+          "word": "板",
+          "start": 1.56,
+          "end": 1.82
+        },
+        {
+          "word": "凳",
+          "start": 1.82,
+          "end": 2.06
+        },
+        {
+          "word": "宽",
+          "start": 2.06,
+          "end": 2.08
+        },
+        {
+          "word": "。",
+          "start": 2.08,
+          "end": 2.08
+        },
+        {
+          "word": "扁",
+          "start": 3.08,
+          "end": 3.34
+        },
+        {
+          "word": "担",
+          "start": 3.34,
+          "end": 3.6
+        },
+        {
+          "word": "没",
+          "start": 3.6,
+          "end": 3.78
+        },
+        {
+          "word": "有",
+          "start": 3.78,
+          "end": 4.04
+        },
+        {
+          "word": "板",
+          "start": 4.04,
+          "end": 4.28
+        },
+        {
+          "word": "凳",
+          "start": 4.28,
+          "end": 4.5
+        },
+        {
+          "word": "宽",
+          "start": 4.5,
+          "end": 4.5
+        },
+        {
+          "word": "，",
+          "start": 4.5,
+          "end": 4.5
+        },
+        {
+          "word": "板",
+          "start": 5.02,
+          "end": 5.3
+        },
+        {
+          "word": "凳",
+          "start": 5.3,
+          "end": 5.56
+        },
+        {
+          "word": "没",
+          "start": 5.56,
+          "end": 5.76
+        },
+        {
+          "word": "有",
+          "start": 5.76,
+          "end": 6.06
+        },
+        {
+          "word": "扁",
+          "start": 6.06,
+          "end": 6.26
+        },
+        {
+          "word": "担",
+          "start": 6.26,
+          "end": 6.46
+        },
+        {
+          "word": "长",
+          "start": 6.46,
+          "end": 6.76
+        },
+        {
+          "word": "。",
+          "start": 6.76,
+          "end": 6.76
+        },
+        {
+          "word": "<end>",
+          "start": 7.026938775510204,
+          "end": 7.026938775510204
+        }
+      ],
+      "engine": "starfish"
+    },
+    "segments": [
+      {
+        "line": 0,
+        "start": 0,
+        "end": 1.56
+      },
+      {
+        "line": 1,
+        "start": 1.56,
+        "end": 3.08
+      },
+      {
+        "line": 2,
+        "start": 3.08,
+        "end": 5.02
+      },
+      {
+        "line": 3,
+        "start": 5.02,
+        "end": 7.026938775510204
+      }
+    ],
+    "lineAudioCuts": [
+      0,
+      1.17,
+      2.58,
+      4.76,
+      7.026938775510204
+    ]
+  },
+  {
+    "id": 7,
+    "title": "白石塔",
+    "text": "白石白又滑，\n搬来白石搭白塔。\n白石塔，白石搭，\n白石搭白石塔。",
+    "speech": {
+      "audio_url": "https://resource2.heygen.ai/text_to_speech/e47c29f4253f4aa0aa35d49ea6951a33/1803df59c37443789d2e4f71c82859a0/id=bac21bab-076b-4348-a9ed-bdb5b701106d.wav",
+      "duration": 12.277551020408163,
+      "request_id": null,
+      "word_timestamps": [
+        {
+          "word": "<start>",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "word": "白",
+          "start": 0.42,
+          "end": 0.56
+        },
+        {
+          "word": "石",
+          "start": 0.56,
+          "end": 0.98
+        },
+        {
+          "word": "白",
+          "start": 0.98,
+          "end": 1.58
+        },
+        {
+          "word": "又",
+          "start": 1.58,
+          "end": 2
+        },
+        {
+          "word": "滑",
+          "start": 2,
+          "end": 2.04
+        },
+        {
+          "word": "，",
+          "start": 2.04,
+          "end": 2.04
+        },
+        {
+          "word": "搬",
+          "start": 2.72,
+          "end": 3.18
+        },
+        {
+          "word": "来",
+          "start": 3.18,
+          "end": 3.62
+        },
+        {
+          "word": "白",
+          "start": 3.62,
+          "end": 4.04
+        },
+        {
+          "word": "石",
+          "start": 4.04,
+          "end": 4.52
+        },
+        {
+          "word": "搭",
+          "start": 4.52,
+          "end": 5
+        },
+        {
+          "word": "白",
+          "start": 5,
+          "end": 5.44
+        },
+        {
+          "word": "塔",
+          "start": 5.44,
+          "end": 5.44
+        },
+        {
+          "word": "。",
+          "start": 5.44,
+          "end": 5.44
+        },
+        {
+          "word": "白",
+          "start": 6.3,
+          "end": 6.72
+        },
+        {
+          "word": "石",
+          "start": 6.72,
+          "end": 7.16
+        },
+        {
+          "word": "塔",
+          "start": 7.16,
+          "end": 7.16
+        },
+        {
+          "word": "，",
+          "start": 7.16,
+          "end": 7.16
+        },
+        {
+          "word": "白",
+          "start": 7.66,
+          "end": 8.08
+        },
+        {
+          "word": "石",
+          "start": 8.08,
+          "end": 8.56
+        },
+        {
+          "word": "搭",
+          "start": 8.56,
+          "end": 8.56
+        },
+        {
+          "word": "，",
+          "start": 8.56,
+          "end": 8.56
+        },
+        {
+          "word": "白",
+          "start": 9.44,
+          "end": 9.88
+        },
+        {
+          "word": "石",
+          "start": 9.88,
+          "end": 10.32
+        },
+        {
+          "word": "搭",
+          "start": 10.32,
+          "end": 10.76
+        },
+        {
+          "word": "白",
+          "start": 10.76,
+          "end": 11.2
+        },
+        {
+          "word": "石",
+          "start": 11.2,
+          "end": 11.66
+        },
+        {
+          "word": "塔",
+          "start": 11.66,
+          "end": 11.66
+        },
+        {
+          "word": "。",
+          "start": 11.66,
+          "end": 11.66
+        },
+        {
+          "word": "<end>",
+          "start": 12.277551020408163,
+          "end": 12.277551020408163
+        }
+      ],
+      "engine": "starfish"
+    },
+    "segments": [
+      {
+        "line": 0,
+        "start": 0,
+        "end": 2.72
+      },
+      {
+        "line": 1,
+        "start": 2.72,
+        "end": 6.3
+      },
+      {
+        "line": 2,
+        "start": 6.3,
+        "end": 9.44
+      },
+      {
+        "line": 3,
+        "start": 9.44,
+        "end": 12.277551020408163
+      }
+    ],
+    "lineAudioCuts": [
+      0,
+      2.38,
+      5.87,
+      9.0,
+      12.277551020408163
+    ]
+  },
+  {
+    "id": 8,
+    "title": "盆和瓶",
+    "text": "桌上放个盆，\n盆里放个瓶。\n乒乓一声响，\n瓶碰盆，盆碰瓶。",
+    "speech": {
+      "audio_url": "https://resource2.heygen.ai/text_to_speech/e47c29f4253f4aa0aa35d49ea6951a33/1803df59c37443789d2e4f71c82859a0/id=05b9b126-10e8-45d3-bcdc-23f22ea9fbe9.wav",
+      "duration": 8.176326530612245,
+      "request_id": null,
+      "word_timestamps": [
+        {
+          "word": "<start>",
+          "start": 0,
+          "end": 0
+        },
+        {
+          "word": "桌",
+          "start": 0.32,
+          "end": 0.46
+        },
+        {
+          "word": "上",
+          "start": 0.46,
+          "end": 0.8
+        },
+        {
+          "word": "放",
+          "start": 0.8,
+          "end": 1.08
+        },
+        {
+          "word": "个",
+          "start": 1.08,
+          "end": 1.36
+        },
+        {
+          "word": "盆",
+          "start": 1.38,
+          "end": 1.38
+        },
+        {
+          "word": "，",
+          "start": 1.38,
+          "end": 1.38
+        },
+        {
+          "word": "盆",
+          "start": 1.96,
+          "end": 2.28
+        },
+        {
+          "word": "里",
+          "start": 2.28,
+          "end": 2.56
+        },
+        {
+          "word": "放",
+          "start": 2.56,
+          "end": 2.86
+        },
+        {
+          "word": "个",
+          "start": 2.86,
+          "end": 3.14
+        },
+        {
+          "word": "瓶",
+          "start": 3.14,
+          "end": 3.14
+        },
+        {
+          "word": "。",
+          "start": 3.14,
+          "end": 3.14
+        },
+        {
+          "word": "乒",
+          "start": 4.019,
+          "end": 4.32
+        },
+        {
+          "word": "乓",
+          "start": 4.32,
+          "end": 4.6
+        },
+        {
+          "word": "一",
+          "start": 4.6,
+          "end": 4.86
+        },
+        {
+          "word": "声",
+          "start": 4.86,
+          "end": 5.2
+        },
+        {
+          "word": "响",
+          "start": 5.2,
+          "end": 5.2
+        },
+        {
+          "word": "，",
+          "start": 5.2,
+          "end": 5.2
+        },
+        {
+          "word": "瓶",
+          "start": 5.78,
+          "end": 6.08
+        },
+        {
+          "word": "碰",
+          "start": 6.08,
+          "end": 6.38
+        },
+        {
+          "word": "盆",
+          "start": 6.38,
+          "end": 6.38
+        },
+        {
+          "word": "，",
+          "start": 6.38,
+          "end": 6.38
+        },
+        {
+          "word": "盆",
+          "start": 6.92,
+          "end": 7.22
+        },
+        {
+          "word": "碰",
+          "start": 7.22,
+          "end": 7.52
+        },
+        {
+          "word": "瓶",
+          "start": 7.52,
+          "end": 7.52
+        },
+        {
+          "word": "。",
+          "start": 7.52,
+          "end": 7.52
+        },
+        {
+          "word": "<end>",
+          "start": 8.176326530612245,
+          "end": 8.176326530612245
+        }
+      ],
+      "engine": "starfish"
+    },
+    "segments": [
+      {
+        "line": 0,
+        "start": 0,
+        "end": 1.96
+      },
+      {
+        "line": 1,
+        "start": 1.96,
+        "end": 4.019
+      },
+      {
+        "line": 2,
+        "start": 4.019,
+        "end": 5.78
+      },
+      {
+        "line": 3,
+        "start": 5.78,
+        "end": 8.176326530612245
+      }
+    ],
+    "lineAudioCuts": [
+      0,
+      1.67,
+      3.5795000000000003,
+      5.49,
+      8.176326530612245
+    ]
+  }
+]

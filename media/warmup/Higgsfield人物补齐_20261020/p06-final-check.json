@@ -1,0 +1,20 @@
+{
+  "id": 6,
+  "title": "扁担和板凳",
+  "framesDecoded": 176,
+  "fps": 25.0,
+  "duration": 7.04,
+  "voiceDuration": 7.0269375,
+  "audioLagSeconds": 0.0,
+  "audioCorrelation": 0.999990701675415,
+  "syncnetOffsetFrames25fps": 0,
+  "syncnetConfidence": 8.296252250671387,
+  "syncnetDistance": 8.05754566192627,
+  "syncnetCropBox": [
+    142,
+    216,
+    178,
+    178
+  ],
+  "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme."
+}

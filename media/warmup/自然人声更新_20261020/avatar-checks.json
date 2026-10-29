@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "framesDecoded": 174,
+    "fps": 25.0,
+    "duration": 6.96,
+    "speechDuration": 6.9485625,
+    "audioLagSeconds": 0.0,
+    "audioCorrelation": 0.999957263469696
+  },
+  {
+    "id": 2,
+    "framesDecoded": 176,
+    "fps": 25.0,
+    "duration": 7.04,
+    "speechDuration": 7.0269375,
+    "audioLagSeconds": 0.0,
+    "audioCorrelation": 0.9999896883964539
+  },
+  {
+    "id": 5,
+    "framesDecoded": 227,
+    "fps": 25.0,
+    "duration": 9.08,
+    "speechDuration": 9.0645,
+    "audioLagSeconds": 0.0,
+    "audioCorrelation": 0.999976634979248
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "id": 8,
+  "title": "盆和瓶",
+  "framesDecoded": 270,
+  "fps": 30.0,
+  "duration": 9.0,
+  "voiceDuration": 8.1763125,
+  "audioLagSeconds": 0.0,
+  "audioCorrelation": 0.9998894333839417,
+  "syncnetOffsetFrames25fps": 1,
+  "syncnetConfidence": 4.878349304199219,
+  "syncnetDistance": 10.29213809967041,
+  "syncnetCropBox": [
+    237,
+    189,
+    350,
+    350
+  ],
+  "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme."
+}

@@ -1,0 +1,210 @@
+{
+  "status": "video waiting",
+  "provider": "HeyGen Starfish",
+  "voice": "Lea inside sitting down",
+  "speed": 0.9,
+  "postStretch": false,
+  "duration": 9.064489795918368,
+  "script": "一只青蛙一张嘴，\n两只眼睛四条腿。\n两只青蛙两张嘴，\n四只眼睛八条腿。",
+  "wordTimestamps": [
+    {
+      "word": "<start>",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "word": "一",
+      "start": 0.32,
+      "end": 0.48
+    },
+    {
+      "word": "只",
+      "start": 0.48,
+      "end": 0.7
+    },
+    {
+      "word": "青",
+      "start": 0.72,
+      "end": 0.94
+    },
+    {
+      "word": "蛙",
+      "start": 0.94,
+      "end": 1.3
+    },
+    {
+      "word": "一",
+      "start": 1.3,
+      "end": 1.54
+    },
+    {
+      "word": "张",
+      "start": 1.54,
+      "end": 1.86
+    },
+    {
+      "word": "嘴",
+      "start": 1.86,
+      "end": 1.86
+    },
+    {
+      "word": "，",
+      "start": 1.86,
+      "end": 1.86
+    },
+    {
+      "word": "两",
+      "start": 2.54,
+      "end": 2.84
+    },
+    {
+      "word": "只",
+      "start": 2.84,
+      "end": 2.98
+    },
+    {
+      "word": "眼",
+      "start": 2.98,
+      "end": 3.24
+    },
+    {
+      "word": "睛",
+      "start": 3.24,
+      "end": 3.54
+    },
+    {
+      "word": "四",
+      "start": 3.54,
+      "end": 3.78
+    },
+    {
+      "word": "条",
+      "start": 3.78,
+      "end": 4.019
+    },
+    {
+      "word": "腿",
+      "start": 4.019,
+      "end": 4.04
+    },
+    {
+      "word": "。",
+      "start": 4.04,
+      "end": 4.04
+    },
+    {
+      "word": "两",
+      "start": 4.86,
+      "end": 5.16
+    },
+    {
+      "word": "只",
+      "start": 5.16,
+      "end": 5.36
+    },
+    {
+      "word": "青",
+      "start": 5.36,
+      "end": 5.58
+    },
+    {
+      "word": "蛙",
+      "start": 5.58,
+      "end": 5.86
+    },
+    {
+      "word": "两",
+      "start": 5.86,
+      "end": 6.16
+    },
+    {
+      "word": "张",
+      "start": 6.16,
+      "end": 6.44
+    },
+    {
+      "word": "嘴",
+      "start": 6.44,
+      "end": 6.44
+    },
+    {
+      "word": "，",
+      "start": 6.44,
+      "end": 6.44
+    },
+    {
+      "word": "四",
+      "start": 7.06,
+      "end": 7.32
+    },
+    {
+      "word": "只",
+      "start": 7.32,
+      "end": 7.48
+    },
+    {
+      "word": "眼",
+      "start": 7.48,
+      "end": 7.76
+    },
+    {
+      "word": "睛",
+      "start": 7.76,
+      "end": 8.08
+    },
+    {
+      "word": "八",
+      "start": 8.08,
+      "end": 8.32
+    },
+    {
+      "word": "条",
+      "start": 8.32,
+      "end": 8.58
+    },
+    {
+      "word": "腿",
+      "start": 8.58,
+      "end": 8.78
+    },
+    {
+      "word": "。",
+      "start": 8.78,
+      "end": 8.78
+    },
+    {
+      "word": "<end>",
+      "start": 9.064489795918368,
+      "end": 9.064489795918368
+    }
+  ],
+  "scriptMatch": true,
+  "segments": [
+    {
+      "line": 0,
+      "start": 0,
+      "end": 2.54
+    },
+    {
+      "line": 1,
+      "start": 2.54,
+      "end": 4.86
+    },
+    {
+      "line": 2,
+      "start": 4.86,
+      "end": 7.06
+    },
+    {
+      "line": 3,
+      "start": 7.06,
+      "end": 9.064489795918368
+    }
+  ],
+  "validation": "Service text and timestamps match script; not an independent perceptual naturalness or phoneme lip-sync check.",
+  "originalCoursewareUnchanged": true,
+  "videoId": "6ae66e3e06a9085f7ba07e8a067c6575",
+  "videoPage": "https://app.heygen.com/videos/6ae66e3e06a9085f7ba07e8a067c6575",
+  "audioDrivesVideo": true,
+  "noIndependentLipSyncPassYet": true
+}

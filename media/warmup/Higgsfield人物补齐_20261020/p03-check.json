@@ -1,0 +1,20 @@
+{
+  "id": 3,
+  "title": "一二三四五",
+  "framesDecoded": 240,
+  "fps": 30.0,
+  "duration": 8.0,
+  "voiceDuration": 7.2620625,
+  "audioLagSeconds": 0.0,
+  "audioCorrelation": 0.9996011257171631,
+  "syncnetOffsetFrames25fps": -1,
+  "syncnetConfidence": 4.23199462890625,
+  "syncnetDistance": 9.714919090270996,
+  "syncnetCropBox": [
+    240,
+    190,
+    350,
+    350
+  ],
+  "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme."
+}

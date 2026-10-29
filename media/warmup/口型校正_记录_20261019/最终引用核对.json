@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "installedCount": 8,
+  "pageCount": 527,
+  "pageRevision": 5,
+  "allCaptionBoundariesPreserved": true,
+  "existingPlayerUnchanged": true,
+  "browserInteraction": "No new browser interaction test; file and media checks only",
+  "clips": [
+    {
+      "id": 1,
+      "title": "四和十",
+      "page": 125,
+      "newVideoExists": true,
+      "oldVideoPreserved": true,
+      "audioLagSeconds": 0
+    },
+    {
+      "id": 2,
+      "title": "吃葡萄",
+      "page": 125,
+      "newVideoExists": true,
+      "oldVideoPreserved": true,
+      "audioLagSeconds": 0
+    },
+    {
+      "id": 3,
+      "title": "一二三四五",
+      "page": 126,
+      "newVideoExists": true,
+      "oldVideoPreserved": true,
+      "audioLagSeconds": 0
+    },
+    {
+      "id": 4,
+      "title": "小老鼠",
+      "page": 126,
+      "newVideoExists": true,
+      "oldVideoPreserved": true,
+      "audioLagSeconds": 0
+    },
+    {
+      "id": 5,
+      "title": "数青蛙",
+      "page": 127,
+      "newVideoExists": true,
+      "oldVideoPreserved": true,
+      "audioLagSeconds": 0
+    },
+    {
+      "id": 6,
+      "title": "扁担和板凳",
+      "page": 127,
+      "newVideoExists": true,
+      "oldVideoPreserved": true,
+      "audioLagSeconds": 0
+    },
+    {
+      "id": 7,
+      "title": "白石塔",
+      "page": 128,
+      "newVideoExists": true,
+      "oldVideoPreserved": true,
+      "audioLagSeconds": 0
+    },
+    {
+      "id": 8,
+      "title": "盆和瓶",
+      "page": 128,
+      "newVideoExists": true,
+      "oldVideoPreserved": true,
+      "audioLagSeconds": 0
+    }
+  ]
+}

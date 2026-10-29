@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="assets/picker.css">
 <link rel="stylesheet" href="assets/workbench.css">
 <link rel="stylesheet" href="assets/pen.css">
+<link rel="stylesheet" href="assets/extension-launcher.css">
 </head>
 <body>
 <noscript><p class="fatal">本课件需要启用 JavaScript。请用 Chrome 或 Edge 浏览器打开。</p></noscript>
@@ -25,6 +26,7 @@ if (document.documentMode) { document.write('<style>#app,#side,#scrim,#grid,#hel
     <button id="htOpenProgress" class="ht-tool ht-tool-main" title="课程安排（T）">课程安排 <span id="htCompletion">0/29</span></button>
     <span id="htContext" class="ht-context"></span>
     <div class="ht-tools">
+      <button id="l07ExtensionOpen" class="ht-tool" title="第7课备用课堂活动，可按剩余时间选择">第7课拓展</button>
       <button id="htQuickMark" class="ht-tool ht-tool-save" title="记录当前授课位置（K）">讲到这里</button>
       <button id="htResume" class="ht-tool" title="返回上次标记的授课页">继续上次</button>
       <button id="penToggle" class="ht-tool" aria-pressed="false" aria-controls="penTools" title="开启或退出画笔（D）">画笔</button>
@@ -145,16 +147,21 @@ if (document.documentMode) { document.write('<style>#app,#side,#scrim,#grid,#hel
 <audio id="au" preload="none"></audio>
 
 <script src="assets/data.js"></script>
+<script src="assets/page-layout.js"></script>
 <script src="assets/media-data.js"></script>
+<script src="assets/warmup-data.js"></script>
 <script src="assets/player.js"></script>
+<script src="assets/warmup.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/country-data.js"></script>
 <script src="assets/country.js"></script>
 <script src="assets/teaching-data.js"></script>
-<script src="assets/local-roster.js"></script>
 <script src="assets/teaching.js"></script>
 <script src="assets/picker.js"></script>
+<script src="assets/secure-blobs.js"></script>
+<script src="assets/ht-secure.js"></script>
 <script src="assets/pen.js"></script>
+<script src="assets/extension-launcher.js"></script>
 <script>
 // Shown when the assets folder did not come along (only the html was copied, or it was opened from inside a zip)
 if (!document.documentMode && (!window.DECK || !window.__HT_APP)) {

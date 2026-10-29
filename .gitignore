@@ -1,7 +1,6 @@
 .DS_Store
-*教师本机名单*
+._*
+*本机名单*
 *学生名单*
-*backup*.json
-*备份*.json
-node_modules/
-*.local-tmp
+*backup*
+*备份*

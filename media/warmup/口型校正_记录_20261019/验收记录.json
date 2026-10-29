@@ -1,0 +1,293 @@
+{
+  "completed": true,
+  "approachApprovedByUser": "统一正面写实人物朗读，保留情景配图",
+  "clipCount": 8,
+  "allVideoFramesDecoded": 2939,
+  "audioRetainedExactly": true,
+  "subtitleBoundariesUnchanged": true,
+  "visualReview": "15 mouth samples spanning each entire clip, source scene crops inspected; no independent phoneme-level listening certification",
+  "limitation": "Local 96px face synthesis softens fine lip/teeth detail; do not claim perfectly precise native-human articulation",
+  "originalsRetained": true,
+  "clips": [
+    {
+      "id": 1,
+      "decodedFrames": 372,
+      "audioCorrelation": 1.000001311302185,
+      "audioLagSeconds": 0.0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 732,
+            "start_time": "0.000000",
+            "duration": "14.880000",
+            "nb_frames": "372"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.000000",
+            "duration": "14.900000",
+            "nb_frames": "643"
+          }
+        ],
+        "format": {
+          "duration": "14.900000"
+        }
+      },
+      "title": "四和十",
+      "page": 125,
+      "installedVideo": "media/warmup/p01-front-scene-v1.mp4",
+      "sourceVideo": "media/warmup/p01-scene.mp4"
+    },
+    {
+      "id": 2,
+      "decodedFrames": 372,
+      "audioCorrelation": 1.000002384185791,
+      "audioLagSeconds": 0.0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 732,
+            "start_time": "0.000000",
+            "duration": "14.880000",
+            "nb_frames": "372"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.000000",
+            "duration": "14.900000",
+            "nb_frames": "643"
+          }
+        ],
+        "format": {
+          "duration": "14.900000"
+        }
+      },
+      "title": "吃葡萄",
+      "page": 125,
+      "installedVideo": "media/warmup/p02-front-scene-v1.mp4",
+      "sourceVideo": "media/warmup/p02-scene.mp4"
+    },
+    {
+      "id": 3,
+      "decodedFrames": 372,
+      "audioCorrelation": 1.0000007152557373,
+      "audioLagSeconds": 0.0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 732,
+            "start_time": "0.000000",
+            "duration": "14.880000",
+            "nb_frames": "372"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.000000",
+            "duration": "14.900000",
+            "nb_frames": "643"
+          }
+        ],
+        "format": {
+          "duration": "14.900000"
+        }
+      },
+      "title": "一二三四五",
+      "page": 126,
+      "installedVideo": "media/warmup/p03-front-scene-v1.mp4",
+      "sourceVideo": "media/warmup/p03-scene.mp4"
+    },
+    {
+      "id": 4,
+      "decodedFrames": 372,
+      "audioCorrelation": 1.000001311302185,
+      "audioLagSeconds": 0.0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 732,
+            "start_time": "0.000000",
+            "duration": "14.880000",
+            "nb_frames": "372"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.000000",
+            "duration": "14.900000",
+            "nb_frames": "643"
+          }
+        ],
+        "format": {
+          "duration": "14.900000"
+        }
+      },
+      "title": "小老鼠",
+      "page": 126,
+      "installedVideo": "media/warmup/p04-front-scene-v1.mp4",
+      "sourceVideo": "media/warmup/p04-scene.mp4"
+    },
+    {
+      "id": 5,
+      "decodedFrames": 335,
+      "audioCorrelation": 1.0000030994415283,
+      "audioLagSeconds": 0.0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 732,
+            "start_time": "0.000000",
+            "duration": "13.400000",
+            "nb_frames": "335"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.000000",
+            "duration": "13.389002",
+            "nb_frames": "578"
+          }
+        ],
+        "format": {
+          "duration": "13.400000"
+        }
+      },
+      "title": "数青蛙",
+      "page": 127,
+      "installedVideo": "media/warmup/p05-front-scene-v1.mp4",
+      "sourceVideo": "media/warmup/frog-scene.mp4"
+    },
+    {
+      "id": 6,
+      "decodedFrames": 372,
+      "audioCorrelation": 1.000001311302185,
+      "audioLagSeconds": 0.0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 732,
+            "start_time": "0.000000",
+            "duration": "14.880000",
+            "nb_frames": "372"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.000000",
+            "duration": "14.900000",
+            "nb_frames": "643"
+          }
+        ],
+        "format": {
+          "duration": "14.900000"
+        }
+      },
+      "title": "扁担和板凳",
+      "page": 127,
+      "installedVideo": "media/warmup/p06-front-scene-v1.mp4",
+      "sourceVideo": "media/warmup/p06-scene.mp4"
+    },
+    {
+      "id": 7,
+      "decodedFrames": 372,
+      "audioCorrelation": 1.000001072883606,
+      "audioLagSeconds": 0.0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 732,
+            "start_time": "0.000000",
+            "duration": "14.880000",
+            "nb_frames": "372"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.000000",
+            "duration": "14.900000",
+            "nb_frames": "643"
+          }
+        ],
+        "format": {
+          "duration": "14.900000"
+        }
+      },
+      "title": "白石塔",
+      "page": 128,
+      "installedVideo": "media/warmup/p07-front-scene-v1.mp4",
+      "sourceVideo": "media/warmup/p07-scene.mp4"
+    },
+    {
+      "id": 8,
+      "decodedFrames": 372,
+      "audioCorrelation": 1.0000020265579224,
+      "audioLagSeconds": 0.0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 732,
+            "start_time": "0.000000",
+            "duration": "14.880000",
+            "nb_frames": "372"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "start_time": "0.000000",
+            "duration": "14.900000",
+            "nb_frames": "643"
+          }
+        ],
+        "format": {
+          "duration": "14.900000"
+        }
+      },
+      "title": "盆和瓶",
+      "page": 128,
+      "installedVideo": "media/warmup/p08-front-scene-v1.mp4",
+      "sourceVideo": "media/warmup/p08-scene.mp4"
+    }
+  ]
+}

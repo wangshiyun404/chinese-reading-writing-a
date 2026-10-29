@@ -1,0 +1,117 @@
+[
+  {
+    "id": 3,
+    "title": "一二三四五",
+    "framesDecoded": 182,
+    "fps": 25.0,
+    "duration": 7.28,
+    "voiceDuration": 7.2620625,
+    "audioLagSeconds": 0.0,
+    "audioCorrelation": 0.9999901056289673,
+    "syncnetOffsetFrames25fps": 0,
+    "syncnetConfidence": 4.380720138549805,
+    "syncnetDistance": 9.58376407623291,
+    "syncnetCropBox": [
+      145,
+      215,
+      177,
+      177
+    ],
+    "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme.",
+    "visualSampleShiftSeconds": -0.04,
+    "sourceJob": "a6a72913-ffd6-42bc-8596-0bd6b83bfd19",
+    "installedFile": "media/warmup/p03-natural-scene-v3.mp4"
+  },
+  {
+    "id": 4,
+    "title": "小老鼠",
+    "framesDecoded": 255,
+    "fps": 25.0,
+    "duration": 10.2,
+    "voiceDuration": 10.18775,
+    "audioLagSeconds": 0.0,
+    "audioCorrelation": 0.9999956488609314,
+    "syncnetOffsetFrames25fps": 0,
+    "syncnetConfidence": 5.1023054122924805,
+    "syncnetDistance": 8.764856338500977,
+    "syncnetCropBox": [
+      143,
+      213,
+      176,
+      176
+    ],
+    "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme.",
+    "visualSampleShiftSeconds": -0.04,
+    "sourceJob": "21934b4c-c762-4917-af25-95c7b5e7ab44",
+    "installedFile": "media/warmup/p04-natural-scene-v3.mp4"
+  },
+  {
+    "id": 6,
+    "title": "扁担和板凳",
+    "framesDecoded": 176,
+    "fps": 25.0,
+    "duration": 7.04,
+    "voiceDuration": 7.0269375,
+    "audioLagSeconds": 0.0,
+    "audioCorrelation": 0.999990701675415,
+    "syncnetOffsetFrames25fps": 0,
+    "syncnetConfidence": 8.296252250671387,
+    "syncnetDistance": 8.05754566192627,
+    "syncnetCropBox": [
+      142,
+      216,
+      178,
+      178
+    ],
+    "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme.",
+    "visualSampleShiftSeconds": 0.0,
+    "sourceJob": "3e608ad0-2f9a-4311-9ccc-9351a2bb3de8",
+    "installedFile": "media/warmup/p06-natural-scene-v3.mp4"
+  },
+  {
+    "id": 7,
+    "title": "白石塔",
+    "framesDecoded": 307,
+    "fps": 25.0,
+    "duration": 12.28,
+    "voiceDuration": 12.2775625,
+    "audioLagSeconds": 0.0,
+    "audioCorrelation": 0.9999938607215881,
+    "syncnetOffsetFrames25fps": 0,
+    "syncnetConfidence": 7.86338472366333,
+    "syncnetDistance": 7.720080852508545,
+    "syncnetCropBox": [
+      147,
+      212,
+      175,
+      175
+    ],
+    "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme.",
+    "visualSampleShiftSeconds": -0.08,
+    "sourceJob": "72ab5db6-9363-4a11-80e1-d5dd0e1d59a3",
+    "installedFile": "media/warmup/p07-natural-scene-v3.mp4"
+  },
+  {
+    "id": 8,
+    "title": "盆和瓶",
+    "framesDecoded": 204,
+    "fps": 25.0,
+    "duration": 8.16,
+    "voiceDuration": 8.1763125,
+    "audioLagSeconds": 0.0,
+    "audioCorrelation": 0.999995768070221,
+    "syncnetOffsetFrames25fps": 0,
+    "syncnetConfidence": 4.923224449157715,
+    "syncnetDistance": 10.295479774475098,
+    "syncnetCropBox": [
+      141,
+      213,
+      176,
+      176
+    ],
+    "note": "SyncNet is an approximate global timing check; it does not certify every Mandarin phoneme.",
+    "visualSampleShiftSeconds": 0.04,
+    "sourceJob": "e9ae62c1-ed77-408e-9d6f-de225412ec30",
+    "installedFile": "media/warmup/p08-natural-scene-v3.mp4"
+  }
+]

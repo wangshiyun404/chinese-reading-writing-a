@@ -54,8 +54,8 @@
     out.picker = { drawn:activeDrawn, excluded:activeExcluded, last:activeLast, round:p.round };
     return out;
   }
-  function unpack(obj) { if (!obj || obj.format !== FORMAT || obj.version !== 1 || obj.courseId !== COURSE) fail(); return validState(obj.data); }
-  function envelope(data) { return { format:FORMAT, version:1, courseId:COURSE, exportedAt:new Date().toISOString(), data:data }; }
+  function unpack(obj) { if (!obj || obj.format !== FORMAT || obj.version !== 1 || obj.courseId !== COURSE) fail(); return validState(window.RWPageLayout ? window.RWPageLayout.upgradeBackup(obj).data : obj.data); }
+  function envelope(data) { return { format:FORMAT, version:1, courseId:COURSE, pageRevision:5, exportedAt:new Date().toISOString(), data:data }; }
   var state = empty(), badStored = false;
   try {
     var raw = localStorage.getItem(KEY);
@@ -300,11 +300,11 @@
     basis.appendChild(el('h2',null,'资料核对与安排说明'));
     var ul=el('ul');(C.notices||[]).forEach(function(t){ul.appendChild(el('li',null,t));});basis.appendChild(ul);
     var br=el('ul');(C.breaks||[]).forEach(function(b){br.appendChild(el('li',null,dateText(b.date)+'：'+b.reason));});basis.appendChild(br);
-    basis.appendChild(el('p','ht-muted','依据：工作文件夹内教学大纲及学生名单 PDF、本课17份PPT及520页网页课件。页面对应为内容核对后的教学入口建议，并非大纲预先规定的逐页授课顺序。'));
+    basis.appendChild(el('p','ht-muted','依据：工作文件夹内教学大纲及学生名单 PDF、本课17份PPT及527页网页课件。页面对应为内容核对后的教学入口建议，并非大纲预先规定的逐页授课顺序。'));
     infoBody.appendChild(basis);
   }
   upload.onchange=function(){var f=this.files[0];if(!f)return;pendingImport=null;if(f.size>2000000){toast('文件过大，请选择本课导出的 JSON 备份。');return;}var reader=new FileReader();reader.onload=function(){try{pendingImport=unpack(JSON.parse(reader.result));renderInfo();toast('备份校验通过，请核对摘要并确认恢复。');}catch(e){pendingImport=null;renderInfo();toast(e.message||'备份无法读取，未覆盖现有记录。');}};reader.onerror=function(){toast('读取失败，未修改当前记录。');};reader.readAsText(f);};
-  window.HTTeaching={getState:function(){return clone(state);},change:change,subscribe:function(fn){subscribers.push(fn);},toast:toast,registerPanel:registerPanel,openPanel:openPanel,closePanel:closePanel,isPanelOpen:function(id){return opened===id;},pageChanged:function(){renderToolbar();},storageKey:KEY};
+  window.HTTeaching={adopt:function(obj){try{var d=unpack(obj);state=d;badStored=false;undo=[];save();notify();return true;}catch(e){return false;}},getState:function(){return clone(state);},change:change,subscribe:function(fn){subscribers.push(fn);},toast:toast,registerPanel:registerPanel,openPanel:openPanel,closePanel:closePanel,isPanelOpen:function(id){return opened===id;},pageChanged:function(){renderToolbar();},storageKey:KEY};
   $('htOpenProgress').onclick=function(){openPanel('agenda',this);};
   $('htQuickMark').onclick=quickMark;$('htResume').onclick=resume;
   $('htToolbar').addEventListener('pointerenter',function(){Deck.wake();});

@@ -41,10 +41,6 @@
         '<div class="ht-picker-history-grid"><section><h3 id="htPickerDrawnTitle">已抽取</h3><div class="ht-picker-chips" id="htPickerDrawn"></div></section>' +
         '<section><h3 id="htPickerWaitingTitle">还未抽取</h3><div class="ht-picker-chips" id="htPickerWaiting"></div></section></div></details>' +
       '<details class="ht-picker-details" id="htPickerRoster"><summary>管理参与名单 <span id="htPickerRosterCount"></span></summary>' +
-        '<p class="ht-picker-roster-help" id="htLocalRosterHelp">公开网页默认使用学生编号。可选择教师本机名单文件，仅在当前浏览器保存姓名；换电脑或浏览器后需重新导入。教学记录备份不包含姓名。</p>' +
-        '<p class="ht-picker-roster-help" id="htLocalRosterStatus" role="status" aria-live="polite" aria-atomic="true"></p>' +
-        '<div class="ht-picker-roster-tools"><button type="button" class="ht-button" id="htLocalRosterImport" aria-describedby="htLocalRosterHelp">导入本机名单</button><button type="button" class="ht-button" id="htLocalRosterReset" aria-describedby="htLocalRosterHelp">恢复学生编号</button></div>' +
-        '<input type="file" id="htLocalRosterFile" accept=".json,application/json" aria-label="选择教师本机名单 JSON 文件" aria-describedby="htLocalRosterHelp" hidden>' +
         '<p class="ht-picker-roster-help">勾选表示参与抽问；取消勾选可临时排除缺席同学。设置会保留到下次打开。</p>' +
         '<div class="ht-picker-roster-tools"><button type="button" class="ht-button" id="htPickerIncludeAll">恢复全部参与</button><button type="button" class="ht-button" id="htPickerExcludeAll">全部暂不参与</button></div>' +
         '<div class="ht-picker-roster-list" id="htPickerRosterList"></div></details>' +
@@ -130,7 +126,13 @@
       save(p, check.checked ? '恢复参与抽问' : '临时排除学生');
     });
     el('htPickerRosterList').appendChild(row);
-    rosterRows.push({ id: student.id, row: row, check: check, name: name, status: status });
+    rosterRows.push({ id: student.id, row: row, check: check, status: status });
+  });
+
+  window.addEventListener('ht:roster-change', function () {
+    (source.students || []).forEach(function (s) { if (s && byId[s.id] && s.name) { byId[s.id].name = String(s.name); } });
+    rosterRows.forEach(function (r) { var n = r.row.querySelector('.ht-picker-student-name'); if (n) { n.textContent = byId[r.id].name; } r.check.setAttribute('aria-label', byId[r.id].name + '参与抽问'); });
+    render();
   });
 
   function render() {
@@ -167,56 +169,12 @@
       var excluded = p.excluded.indexOf(entry.id) !== -1;
       var drawn = p.drawn.indexOf(entry.id) !== -1;
       entry.check.checked = !excluded;
-      entry.name.textContent = byId[entry.id].name;
-      entry.check.setAttribute('aria-label', byId[entry.id].name + '参与抽问');
       entry.row.className = 'ht-picker-student' + (excluded ? ' ht-picker-student-excluded' : '');
       entry.status.textContent = excluded ? (drawn ? '已抽 · 暂不参与' : '暂不参与') : (drawn ? '本轮已抽' : '等待参与');
     });
     el('htPickerConfirm').hidden = !confirmRound;
     el('htPickerConfirmText').textContent = '开始第 ' + (p.round + 1) + ' 轮后，本轮已抽记录将清空。' + (p.excluded.length ? '已排除的 ' + p.excluded.length + ' 位同学仍暂不参与，可在名单中恢复全部。' : '全班同学将重新参与随机抽取。');
   }
-
-  var localRoster = window.RWLocalRoster;
-  function rosterStatus(message) {
-    el('htLocalRosterStatus').textContent = message || (localRoster ? localRoster.getInfo().message : '本机名单功能未载入，请刷新网页后重试。');
-    el('htLocalRosterImport').disabled = !localRoster;
-    el('htLocalRosterReset').disabled = !localRoster;
-  }
-  window.addEventListener('rw:roster-change', function () {
-    (source.students || []).forEach(function (student) {
-      if (byId[student.id]) byId[student.id].name = student.name;
-    });
-    render();
-    rosterStatus();
-  });
-  var localRosterFile = el('htLocalRosterFile');
-  el('htLocalRosterImport').addEventListener('click', function () {
-    if (!localRoster) return;
-    localRosterFile.value = '';
-    localRosterFile.click();
-  });
-  localRosterFile.addEventListener('change', function () {
-    var file = this.files[0];
-    if (!file || !localRoster) return;
-    if (file.size > 32768) { rosterStatus('名单文件过大，请选择本课教师本机名单 JSON 文件。当前名单未更改。'); return; }
-    var reader = new FileReader();
-    reader.onload = function () {
-      try {
-        localRoster.importText(reader.result);
-        api.toast('本机名单已保存，抽问记录和授课进度保留。');
-      } catch (e) { rosterStatus(e.message || '名单无法导入，当前名单未更改。'); }
-    };
-    reader.onerror = function () { rosterStatus('无法读取所选文件，当前名单未更改。'); };
-    reader.readAsText(file);
-  });
-  el('htLocalRosterReset').addEventListener('click', function () {
-    if (!localRoster) return;
-    try {
-      localRoster.reset();
-      api.toast('已恢复学生编号；抽问记录和授课进度保留。');
-    } catch (e) { rosterStatus(e.message || '无法清除本机名单，本次未切换。'); }
-  });
-  rosterStatus();
 
   function revealResult() {
     var result = el('htPickerResult');

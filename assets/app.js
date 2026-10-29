@@ -18,7 +18,7 @@
   function lessonName(l) { return l.n ? '第' + l.n + '课' : l.title; }
   function store(k, v) {
     try {
-      var o = JSON.parse(localStorage.getItem(KEY) || '{}');
+      var o = JSON.parse(localStorage.getItem(KEY) || '{}'); o.pageRevision = 5;
       if (arguments.length === 1) return o[k];
       o[k] = v; localStorage.setItem(KEY, JSON.stringify(o));
     } catch (e) { /* storage can be unavailable on file:// — the page works without it */ }
@@ -153,7 +153,7 @@
     $('whereTitle').textContent = s.t;
     $('btnPrev').disabled = $('edgePrev').disabled = i === 1;
     $('btnNext').disabled = $('edgeNext').disabled = i === N;
-    $('notesPage').textContent = lessonName(l) + ' · 原PPT第 ' + s.sourcePage + ' 页';
+    $('notesPage').textContent = lessonName(l) + (s.customType ? ' · 新增课堂热身' : ' · 原PPT第 ' + s.sourcePage + ' 页');
     var nb = $('notesBody'); nb.textContent = s.n || '（本页没有备注）'; nb.className = s.n ? '' : 'empty'; nb.scrollTop = 0;
     if (!$('notes').hidden) layout();
     document.title = (l.n ? '第' + l.n + '课 ' : '') + s.t + ' · ' + i + '/' + N + ' · 汉语读写 A 教学工作台';

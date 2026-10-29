@@ -1,0 +1,26 @@
+{
+  "voiceName": "Ainsley",
+  "voice_id": "731b4ffe-e95e-59f4-8c00-81608936091f",
+  "voice_type": "preset",
+  "model": "seed_audio",
+  "speech_rate": -5,
+  "job_id": "ec7d2ca5-8dca-4fd4-aefe-11261a7ce4f8",
+  "source_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KwHyCtye7HbJPzaJTjuAmgxIgk/hf_20261021_035313_ec7d2ca5-8dca-4fd4-aefe-11261a7ce4f8.wav",
+  "status": "preview_awaiting_user_voice_approval",
+  "existing_workbench_unchanged": true,
+  "info": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_rate": "24000",
+        "channels": 2
+      }
+    ],
+    "format": {
+      "format_name": "wav",
+      "duration": "8.593875"
+    }
+  }
+}
