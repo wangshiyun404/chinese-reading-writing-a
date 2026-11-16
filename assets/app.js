@@ -70,7 +70,7 @@
 
   /* ---------- slide display ---------- */
   var cache = {}, loadToken = 0, webpOK = null;
-  function srcOf(i) { return 'slides/' + pad3(i) + '.webp'; }
+  function srcOf(i) { return S[i - 1].image || 'slides/' + pad3(i) + '.webp'; }
   function preload(i) {
     if (i < 1 || i > N || cache[i]) return;
     var im = new Image(); im.src = srcOf(i); cache[i] = im;
@@ -444,7 +444,7 @@
     for (i = l.start; i <= l.end; i++) {
       (function (p) {
         var b = el('button', 'th' + (p === cur ? ' cur' : '')), im = document.createElement('img');
-        im.setAttribute('loading', 'lazy'); im.alt = ''; im.src = 'thumbs/' + pad3(p) + '.webp';
+        im.setAttribute('loading', 'lazy'); im.alt = ''; im.src = S[p - 1].thumbnail || 'thumbs/' + pad3(p) + '.webp';
         var cap = el('div', 'cap'); cap.appendChild(el('i', null, p)); cap.appendChild(el('span', null, S[p - 1].t));
         b.appendChild(im); b.appendChild(cap);
         b.onclick = function () { go(p); closeGrid(); };
