@@ -169,6 +169,7 @@
     if (note) toast(note, 2600);
     if (window.HTTeaching && window.HTTeaching.pageChanged) window.HTTeaching.pageChanged(i); if (window.RWCountry) window.RWCountry.show(i);
     if (window.RWPen) window.RWPen.pageChanged(i);
+    if (window.RWQuantifiers) window.RWQuantifiers.pageChanged(i);
     return note;
   }
   function go(i) { i = parseInt(i, 10); if (!(i >= 1 && i <= N)) { toast('没有这一页（共 ' + N + ' 页）'); return false; } show(i); return true; }

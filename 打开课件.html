@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="assets/workbench.css">
 <link rel="stylesheet" href="assets/pen.css">
 <link rel="stylesheet" href="assets/extension-launcher.css">
+<link rel="stylesheet" href="assets/quantifiers-launcher.css?v=20261119">
 </head>
 <body>
 <noscript><p class="fatal">本课件需要启用 JavaScript。请用 Chrome 或 Edge 浏览器打开。</p></noscript>
@@ -65,7 +66,7 @@ if (document.documentMode) { document.write('<style>#app,#side,#scrim,#grid,#hel
     <span class="pen-hint">鼠标拖动圈画 · → 继续动画<br>笔迹按页保留，刷新后清除</span>
     <button id="penDone">完成圈画</button>
   </div>
-  <div id="animationBar"><span id="animationStatus" aria-live="polite">课件载入中…</span><div class="anim-buttons"><button id="stepBack" title="回退一个动画步骤">上一步</button><button id="stepNext" class="step-main" title="播放下一动画，全部完成后翻页">下一步 / 页</button><button id="stepReplay" title="从本页第一个动画重新开始">重播本页</button><button id="stepAll" title="展开本页全部动画">全部展开</button></div></div>
+  <div id="animationBar"><span id="animationStatus" aria-live="polite">课件载入中…</span><div class="anim-buttons"><button id="quantifierOpen" hidden>量词小课堂 · 图 / 视频 / 挑战</button><button id="stepBack" title="回退一个动画步骤">上一步</button><button id="stepNext" class="step-main" title="播放下一动画，全部完成后翻页">下一步 / 页</button><button id="stepReplay" title="从本页第一个动画重新开始">重播本页</button><button id="stepAll" title="展开本页全部动画">全部展开</button></div></div>
   <div id="countryStrip" hidden></div>
   <div id="notes" hidden>
     <div class="notes-head"><b>备注</b><span id="notesPage"></span><button class="x" id="notesClose" title="关闭备注（N）" aria-label="关闭备注">×</button></div>
@@ -152,7 +153,7 @@ if (document.documentMode) { document.write('<style>#app,#side,#scrim,#grid,#hel
 <script src="assets/warmup-data.js"></script>
 <script src="assets/player.js?v=20261116-layout261"></script>
 <script src="assets/warmup.js"></script>
-<script src="assets/app.js?v=20261116-239-clean"></script>
+<script src="assets/app.js?v=20261119-quantifiers"></script>
 <script src="assets/country-data.js"></script>
 <script src="assets/country.js"></script>
 <script src="assets/teaching-data.js"></script>
@@ -162,6 +163,7 @@ if (document.documentMode) { document.write('<style>#app,#side,#scrim,#grid,#hel
 <script src="assets/ht-secure.js"></script>
 <script src="assets/pen.js"></script>
 <script src="assets/extension-launcher.js"></script>
+<script src="assets/quantifiers-launcher.js?v=20261119"></script>
 <script>
 // Shown when the assets folder did not come along (only the html was copied, or it was opened from inside a zip)
 if (!document.documentMode && (!window.DECK || !window.__HT_APP)) {
