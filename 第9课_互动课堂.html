@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第9课｜我学汉语，我写汉字</title>
+  <link rel="stylesheet" href="assets/lesson9/classroom.css">
+  <script src="assets/lesson9/classroom.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p>汉语读写 A · 第9课</p>
+      <h1>我学汉语，我写汉字</h1>
+    </div>
+    <div class="links">
+      <a href="第9课_授课提示.html" target="_blank" rel="noopener">授课提示 ↗</a>
+      <a href="index.html#p=264" id="backToDeck">原课件 ↗</a>
+    </div>
+  </header>
+  <nav aria-label="课堂环节">
+    <button data-stage="start" type="button" aria-pressed="true">看短片</button>
+    <button data-stage="dictation" type="button" aria-pressed="false">听写生词</button>
+    <button data-stage="core" type="button" aria-pressed="false">汉语核心知识</button>
+    <button data-stage="write" type="button" aria-pressed="false">看图写字</button>
+    <button data-stage="market" type="button" aria-pressed="false">校园小商店</button>
+    <button data-stage="signs" type="button" aria-pressed="false">读校园标识</button>
+    <button data-stage="exit" type="button" aria-pressed="false">离堂小条</button>
+  </nav>
+  <main>
+    <section id="start" aria-labelledby="start-title">
+      <h2 id="start-title" tabindex="-1">在动画里找一个字</h2>
+      <p class="lead">看到你认识的字，就写下来。和同桌比一比，你们找到的一样吗？</p>
+      <div class="split">
+        <article class="panel">
+          <h3>《三十六个字》</h3>
+          <p>选播 00:39–01:05。看父亲给孩子画字，看到一个熟悉的字形就暂停。</p>
+          <a class="action" href="https://tv.cctv.com/2011/03/21/VIDE1365759993860589.shtml" target="_blank" rel="noopener">打开央视片段 ↗</a>
+          <p class="meta">上海美术电影制片厂动画 · 央视网播放，需联网</p>
+        </article>
+        <article class="panel">
+          <h3>看图猜字</h3>
+          <div class="mountain" role="img" aria-label="三座相连的山峰">⛰</div>
+          <p>它让你想到哪个汉字？先写一笔或一个字形，再跟同桌说。</p>
+          <button data-reveal="mountainAnswer" aria-expanded="false">揭晓</button>
+          <p id="mountainAnswer" class="answer" hidden><strong>山</strong> shān。今天再找找新字都由哪些部分组成。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="dictation" aria-labelledby="dictation-title" hidden>
+      <h2 id="dictation-title" tabindex="-1">只听声音，写出汉字</h2>
+      <p class="lead">听两遍 → 独立写 → 同桌互看 → 揭晓后改一个地方。</p>
+      <article class="panel exercise">
+        <p class="meta" id="dictIndex"></p>
+        <div class="row center">
+          <button id="dictPlay" class="action">播放读音</button>
+          <button id="dictReveal" data-reveal="dictAnswer" aria-expanded="false">揭晓本题</button>
+        </div>
+        <audio id="dictAudio" preload="none"></audio>
+        <p id="dictStatus" class="meta" role="status"></p>
+        <div id="dictAnswer" hidden>
+          <p id="dictWord" class="answer big" lang="zh-CN"></p>
+          <p id="dictHint"></p>
+        </div>
+        <div class="row center">
+          <button id="dictPrev">上一题</button>
+          <button id="dictNext">下一题</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="core" aria-labelledby="core-title" hidden>
+      <h2 id="core-title" tabindex="-1">同一个西瓜，两种说法</h2>
+      <p class="lead">先选 A 或 B，用手势一起亮答案。再找同桌，各说一句。</p>
+      <div class="split">
+        <article class="panel">
+          <h3>又……又……</h3>
+          <p class="example">这个西瓜<strong>又</strong>大<strong>又</strong>甜。</p>
+          <p>它大，也甜。</p>
+          <h3>不……也不……</h3>
+          <p class="example">这个西瓜<strong>不</strong>大<strong>也不</strong>甜。</p>
+          <p>它不大，甜味也不够。</p>
+        </article>
+        <article class="panel">
+          <h3>猜猜我说的是哪一种</h3>
+          <p>这本书很新，价钱也便宜。怎么说？</p>
+          <div class="stack">
+            <button data-choice="correct" data-feedback="coreFeedback">A　这本书又新又便宜。</button>
+            <button data-choice="retry" data-feedback="coreFeedback">B　这本书不新也不便宜。</button>
+          </div>
+          <p id="coreFeedback" class="feedback" role="status"></p>
+          <p>换成你的例子：今天我又＿＿又＿＿。</p>
+        </article>
+      </div>
+      <article class="panel follow"><h3>拼一下“写”</h3><p>选出正确的上半部分。用手指在桌上写一次，再在纸上写一次。</p>
+        <div class="row"><button data-choice="correct" data-feedback="shapeFeedback">冖 ＋ 与</button><button data-choice="retry" data-feedback="shapeFeedback">宀 ＋ 与</button><button data-reveal="shapeNote" aria-expanded="false">看字形</button></div>
+        <p id="shapeFeedback" class="feedback" role="status"></p>
+        <p id="shapeNote" class="answer" hidden><strong>写</strong> xiě，5画。上面是“冖”，没有顶上的一点。</p>
+      </article>
+    </section>
+
+    <section id="write" aria-labelledby="write-title" hidden>
+      <h2 id="write-title" tabindex="-1">看动作，写一个字</h2>
+      <p class="lead">先写在纸上。拿不准就看句子，需要时再看拼音。</p>
+      <div class="split">
+        <div id="writePhoto" role="img" class="write-photo"></div>
+        <article class="panel">
+          <p class="meta" id="writeIndex"></p>
+          <p class="example" id="writeSentence"></p>
+          <div class="row">
+            <button data-reveal="writePinyin" aria-expanded="false">拼音提示</button>
+            <button data-reveal="writeAnswer" aria-expanded="false">揭晓汉字</button>
+          </div>
+          <p id="writePinyin" hidden></p>
+          <div id="writeAnswer" hidden><p class="big answer" id="writeWord"></p><p id="writeHint"></p></div>
+          <div class="row">
+            <button id="writePrev">上一图</button>
+            <button id="writeNext">下一图</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="market" aria-labelledby="market-title" hidden>
+      <h2 id="market-title" tabindex="-1">写标签，再开小商店</h2>
+      <p class="lead">先听出买了什么，再用商品图写一张标签。两人一组，一人买，一人卖，然后交换。</p>
+      <div class="split market">
+        <article class="panel">
+          <h3>听一听，记下数量和量词</h3>
+          <video controls playsinline preload="metadata" src="media/quantifiers/stationery.mp4" aria-label="文具小商店情境动画">
+            <track kind="captions" srclang="zh" label="中文字幕" src="media/quantifiers/stationery.vtt">
+          </video>
+          <p class="meta">《文具小商店》18秒 · 听到“我要……”时暂停，让学生写下听到的词组。</p>
+          <a class="source-link" href="https://ci.cn/zwkt/classes-detail/5c33031e-733c-490a-a3af-8ba187d78529" target="_blank" rel="noopener">清迈大学孔子学院《购物》↗</a>
+          <p class="meta">选播 03:25–03:35 的咖啡柜台对话。听到“一杯咖啡多少钱？”时暂停，猜答句，再继续验证。</p>
+          <details>
+            <summary>加看 23 秒 · 杯、瓶、双、斤</summary>
+            <video controls playsinline preload="none" src="media/quantifiers/units.mp4" aria-label="买东西看单位">
+              <track kind="captions" srclang="zh" label="中文字幕" src="media/quantifiers/units.vtt">
+            </video>
+          </details>
+        </article>
+        <article class="panel">
+          <h3>这回买什么？</h3>
+          <div class="product" id="productPhoto" role="img"></div>
+          <p class="example" id="productPrompt"></p>
+          <div class="row">
+            <button id="marketNext">换一件商品</button>
+            <button data-reveal="marketAnswer" aria-expanded="false">看一轮示范</button>
+          </div>
+          <div id="marketAnswer" hidden></div>
+          <a class="source-link" href="量词小课堂.html" target="_blank" rel="noopener">更多量词图卡和练习 ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="signs" aria-labelledby="signs-title" hidden>
+      <h2 id="signs-title" tabindex="-1">这张标识让我怎么做？</h2>
+      <p class="lead">先圈出意思最关键的字，再选一个动作。和同桌说理由。</p>
+      <div class="split">
+        <div class="sign" aria-label="校园标识 小心地滑">
+          <span aria-hidden="true">⚠</span><strong>小心地滑</strong>
+        </div>
+        <article class="panel">
+          <h3>教室门口有这张牌，你怎么办？</h3>
+          <div class="stack">
+            <button data-choice="retry" data-feedback="signFeedback">A　快跑过去</button>
+            <button data-choice="correct" data-feedback="signFeedback">B　慢慢走</button>
+            <button data-choice="retry" data-feedback="signFeedback">C　去寄信</button>
+          </div>
+          <p class="feedback" id="signFeedback" role="status"></p>
+          <button data-reveal="signMore" aria-expanded="false">再读一张牌</button>
+          <div id="signMore" hidden><p class="example">卫生清理中</p><p>有人正在打扫。想一想，这两张牌为什么常常放在一起？</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="exit" aria-labelledby="exit-title" hidden>
+      <h2 id="exit-title" tabindex="-1">离开教室前，写两行</h2>
+      <div class="split">
+        <article class="panel"><h3>我会写一个词组</h3><p class="example">数量 ＋ 量词 ＋ 物品</p><p>写出你今天在小商店买的东西。</p></article>
+        <article class="panel"><h3>我会写自己的句子</h3><p class="example">我觉得写汉字＿＿＿＿。</p><p>自己补完，或者写“我喜欢＿＿＿＿”。写好读给同桌听。</p></article>
+      </div>
+      <article class="panel follow">
+        <button data-reveal="exitExample" aria-expanded="false">写完后看示范</button>
+        <p id="exitExample" class="answer" hidden>两本书。　我觉得写汉字很有意思。</p>
+      </article>
+    </section>
+  </main>
+  <footer class="stage-controls">
+    <button id="prevStage">← 上一环节</button>
+    <span id="stageProgress" aria-live="polite">1 / 7</span>
+    <button id="nextStage" class="action">下一环节 →</button>
+  </footer>
+</body>
+</html>

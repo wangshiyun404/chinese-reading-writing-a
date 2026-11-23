@@ -170,6 +170,11 @@
     if (window.HTTeaching && window.HTTeaching.pageChanged) window.HTTeaching.pageChanged(i); if (window.RWCountry) window.RWCountry.show(i);
     if (window.RWPen) window.RWPen.pageChanged(i);
     if (window.RWQuantifiers) window.RWQuantifiers.pageChanged(i);
+    var classroomLink = $('l09ClassroomLink');
+    if (classroomLink) {
+      classroomLink.hidden = l.id !== 'L09';
+      if (!classroomLink.hidden) classroomLink.href = '第9课_互动课堂.html?from=' + i;
+    }
     return note;
   }
   function go(i) { i = parseInt(i, 10); if (!(i >= 1 && i <= N)) { toast('没有这一页（共 ' + N + ' 页）'); return false; } show(i); return true; }

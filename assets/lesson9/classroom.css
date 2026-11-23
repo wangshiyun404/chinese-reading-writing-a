@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light;
+  --ink: #203b32;
+  --green: #205e49;
+  --paper: #f5f3ec;
+  --border: #baccc1;
+  --accent: #9d3c24;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0; color: var(--ink); background: var(--paper);
+  font: 18px/1.55 "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
+.top {
+  padding: 22px max(24px, calc((100% - 1150px) / 2)); background: #153d31; color: #fff;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+}
+.top p { margin: 0; color: #ecce99; }
+h1, h2, h3 { line-height: 1.23; }
+h1 { font-size: clamp(27px, 4vw, 46px); margin: 4px 0; }
+h2 { font-size: clamp(28px, 4vw, 44px); margin: 8px 0 12px; }
+h3 { font-size: clamp(21px, 2.1vw, 29px); margin: 4px 0 12px; }
+p { margin: 8px 0 14px; }
+.links, .row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.links a { color: #fff; padding: 7px 10px; border: 1px solid #9fbeac; border-radius: 8px; text-decoration: none; white-space: nowrap; }
+nav, main, .stage-controls { width: min(1150px, calc(100% - 36px)); margin-inline: auto; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; padding: 15px 0; }
+button, .action {
+  border: 1px solid var(--border); border-radius: 8px; background: white; color: var(--ink);
+  padding: 9px 15px; font: inherit; min-height: 42px; cursor: pointer;
+}
+.action { display: inline-block; text-decoration: none; }
+button:hover, .action:hover { filter: brightness(.94); }
+button[aria-pressed="true"], .action { color: #fff; background: var(--green); border-color: var(--green); }
+button:disabled { opacity: .45; cursor: default; }
+:focus-visible { outline: 3px solid #bf7040; outline-offset: 3px; }
+main { margin-top: 12px; }
+section { scroll-margin-top: 1rem; }
+.lead { font-size: clamp(19px, 2vw, 24px); margin-bottom: 19px; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.panel {
+  border: 1px solid #dae2d9; border-radius: 15px; background: white; padding: clamp(16px, 2.25vw, 30px);
+}
+.follow { margin-top: 16px; }
+.meta { font-size: 16px; color: #4b6659; }
+.mountain { font-size: 100px; color: var(--green); line-height: 1.15; }
+.answer { background: #e7efe7; color: #164c3a; border-radius: 9px; padding: 10px 14px; }
+.big { font-size: clamp(36px, 6vw, 70px); font-weight: 700; }
+.exercise { max-width: 720px; margin-inline: auto; text-align: center; }
+.center { justify-content: center; }
+.example { font-size: clamp(26px, 3.2vw, 42px); font-weight: 650; }
+.example strong { color: var(--accent); }
+.stack { display: grid; gap: 8px; }
+.stack button { text-align: left; }
+.feedback { min-height: 1.5em; color: #175c44; font-weight: 650; }
+.write-photo { width: 100%; aspect-ratio: 4 / 3; border-radius: 15px; background: #f0e7da url(actions.webp) no-repeat; background-size: 200% 200%; }
+.product { width: min(100%, 185px); margin-inline: auto; aspect-ratio: 1; background-image: url(../quantifiers/objects.png); background-size: 400% 300%; }
+video { width: 100%; display: block; aspect-ratio: 16 / 9; border-radius: 9px; background: #153d31; }
+details { margin-top: 12px; }
+summary { cursor: pointer; }
+.source-link { color: #175d46; text-underline-offset: 3px; }
+.sign {
+  color: #302718; background: #ffdc64; padding: 22px; text-align: center; border: 4px solid #57431d; border-radius: 15px;
+  display: grid; gap: 0; font-size: clamp(36px, 6vw, 72px);
+}
+.sign span { line-height: 1.1; }
+.stage-controls { display: flex; justify-content: space-between; align-items: center; padding: 22px 0 28px; gap: 8px; }
+.guide main { max-width: 940px; }
+.guide ul { padding-left: 1.35em; }
+.guide .panel { margin-bottom: 14px; }
+.guide blockquote { margin: 0; padding: 10px 14px; border-left: 4px solid #6b957c; background: #edf2eb; }
+@media (max-width: 690px) {
+  .top { flex-direction: column; align-items: start; padding: 16px 18px; }
+  .split { grid-template-columns: 1fr; }
+  nav button { font-size: 15px; padding: 6px 9px; }
+  .write-photo { max-width: 450px; }
+}
+@media print {
+  body { font-size: 11pt; background: white; }
+  .top { padding: 0; background: white; color: black; }
+  .top p { color: black; }
+  .links, .print { display: none; }
+  main { width: 100%; }
+  .guide .panel { break-inside: avoid; padding: 12px; }
+  h1 { font-size: 22pt; }
+  h2 { font-size: 17pt; }
+}
