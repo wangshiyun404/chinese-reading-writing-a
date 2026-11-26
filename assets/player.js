@@ -24,6 +24,18 @@ function fixL10Text(){
     doc.querySelectorAll('.Slide#id3 text,.Slide#id4 text,.Slide#id5 text,.Slide#id6 text').forEach(function(t){
       t.setAttribute('font-family','"'+family+'", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif');
       t.setAttributeNS('http://www.w3.org/XML/1998/namespace','xml:lang','zh-CN');
+      t.querySelectorAll('.TextPosition').forEach(function(line){
+        // The exporter put every Han character in its own stretched tspan.
+        // Use a single run so WebKit cannot paint those characters on top of one another.
+        var first=line.firstElementChild,fill=first&&first.getAttribute('fill');
+        var uniform=first&&Array.prototype.every.call(line.children,function(span){
+          return span.localName==='tspan'&&!span.firstElementChild&&
+            Array.prototype.every.call(span.attributes,function(a){
+              return a.name==='fill'||a.name==='textLength'||a.name==='lengthAdjust';
+            })&&span.getAttribute('fill')===fill;
+        });
+        if(uniform){line.textContent=line.textContent;if(fill)line.setAttribute('fill',fill);}
+      });
       t.querySelectorAll('[textLength],[lengthAdjust]').forEach(function(span){
         span.removeAttribute('textLength');
         span.removeAttribute('lengthAdjust');
