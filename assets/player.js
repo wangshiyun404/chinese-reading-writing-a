@@ -2,10 +2,50 @@
 (function(){
 'use strict';
 var D=window.DECK,frame=document.getElementById('slideFrame'),preview=document.getElementById('slideImg'),loading=document.getElementById('frameLoading'),custom=document.getElementById('customSlide');
-var lesson=null,desired=0,current=0,ready=false,step=0,total=0,pendingRestore=null,gotoSent=false;
+var lesson=null,desired=0,current=0,ready=false,step=0,total=0,pendingRestore=null,gotoSent=false,loadGeneration=0;
 var mediaLayer=document.createElement('div');mediaLayer.id='mediaLayer';document.getElementById('stage').appendChild(mediaLayer);var mediaPage=0,mediaRate=1;
 function label(t){document.getElementById('animationStatus').textContent=t;}
 function send(command,args){if(frame.contentWindow)frame.contentWindow.postMessage(Object.assign({type:'rw:command',command:command,lesson:lesson},args||{}),'*');}
+// Lesson 10 source slides 3–6 are course pages 313–316. The SVG export
+// stretches individual punctuation glyphs and whole pinyin lines. Use
+// natural advances and a small Simplified Chinese + pinyin font subset.
+function fixL10Text(){
+  try {
+    var doc=frame.contentDocument;
+    if(!doc||doc.documentElement.localName!=='svg')return;
+    var family='RW Lesson Text';
+    var win=frame.contentWindow,load;
+    if(win.FontFace&&doc.fonts){
+      var url=new URL('assets/l10-classroom-text.woff',window.location.href).href;
+      var face=new win.FontFace(family,'url("'+url+'") format("woff")');
+      doc.fonts.add(face);
+      load=face.load();
+    }
+    doc.querySelectorAll('.Slide#id3 text,.Slide#id4 text,.Slide#id5 text,.Slide#id6 text').forEach(function(t){
+      t.setAttribute('font-family','"'+family+'", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif');
+      t.setAttributeNS('http://www.w3.org/XML/1998/namespace','xml:lang','zh-CN');
+      t.querySelectorAll('[textLength],[lengthAdjust]').forEach(function(span){
+        span.removeAttribute('textLength');
+        span.removeAttribute('lengthAdjust');
+      });
+    });
+    return load;
+  } catch(e) {
+    // Local file previews can restrict iframe DOM access; keep playback.
+  }
+}
+function markReady(){
+  if(lesson!=='L10'){ready=true;apply();return;}
+  var expected=frame.contentWindow, generation=loadGeneration,done=false,loadingFont=fixL10Text();
+  function finish(){
+    if(done)return;
+    done=true;
+    if(lesson==='L10'&&frame.contentWindow===expected&&loadGeneration===generation){ready=true;apply();}
+  }
+  if(!loadingFont){finish();return;}
+  loadingFont.then(finish,finish);
+  setTimeout(finish,1500);
+}
 function renderSlide(page){return D.slides[page-1];}
 function activeLesson(){return D.lessons[renderSlide(desired).l];}
 function apply(){if(!ready||!desired||policies[desired])return;var s=renderSlide(desired);if(current!==s.sourcePage&&!gotoSent){gotoSent=true;send('goto',{page:s.sourcePage});}else if(current===s.sourcePage){frame.style.visibility='visible';loading.hidden=true;preview.hidden=true;gotoSent=false;if(pendingRestore!==null){var n=pendingRestore;pendingRestore=null;send('restore',{step:n});}}}
@@ -15,10 +55,10 @@ var policies={
 };
 D.slides.forEach(function(s,i){if(s.customType&&s.html)policies[i+1]=s.html;});
 function updateStatus(){var s=D.slides[desired-1];label(total?'动画 '+step+' / '+total+(step>=total?' · 下一步进入下一页':' · 按 → 或空格继续'):(s&&s.animated?'本页含点击或自动动画':'按 → 或空格进入下一页'));document.getElementById('stepAll').disabled=!total;document.getElementById('stepReplay').disabled=!ready;var b=document.getElementById('btnPrev'),n=document.getElementById('btnNext');if(b)b.disabled=desired===1&&step===0;if(n)n.disabled=desired===D.count&&step>=total;document.getElementById('edgePrev').disabled=desired===1&&step===0;document.getElementById('edgeNext').disabled=desired===D.count&&step>=total;}
-function show(page){if(page!==desired)pendingRestore=null;desired=page;if(window.RWarmup)window.RWarmup.stop();media(page);if(policies[page]){frame.hidden=true;preview.hidden=true;custom.hidden=false;custom.innerHTML=policies[page];if(window.RWarmup&&renderSlide(page).customType==='warmup')window.RWarmup.mount(custom,page);loading.hidden=true;step=total=0;updateStatus();label(renderSlide(page).customType==='replacement'?'汉字的基本结构 · 按 → 进入下一页':renderSlide(page).customType==='warmup'?'热身朗读 · 慢读 → 齐读 → 稍微加快 · '+(renderSlide(page+1)&&renderSlide(page+1).customType==='warmup'?'下一步继续热身':'下一步进入课文'):'课程要求已按本课教学大纲更新');step=total=0;document.getElementById('stepAll').disabled=true;document.getElementById('stepReplay').disabled=true;return;}custom.hidden=true;frame.hidden=false;var s=renderSlide(page);if(lesson!==s.lessonId){lesson=s.lessonId;ready=false;current=0;step=total=0;gotoSent=false;preview.hidden=false;frame.style.visibility='hidden';loading.hidden=false;label('正在载入本课动画…');frame.src='animations/'+lesson+'.svg'+(lesson==='L08'?'?v=20261116-layout261':'');}else if(current!==s.sourcePage){frame.style.visibility='hidden';preview.hidden=false;loading.hidden=false;gotoSent=false;}apply();updateStatus();}
+function show(page){if(page!==desired)pendingRestore=null;desired=page;if(window.RWarmup)window.RWarmup.stop();media(page);if(policies[page]){frame.hidden=true;preview.hidden=true;custom.hidden=false;custom.innerHTML=policies[page];if(window.RWarmup&&renderSlide(page).customType==='warmup')window.RWarmup.mount(custom,page);loading.hidden=true;step=total=0;updateStatus();label(renderSlide(page).customType==='replacement'?'汉字的基本结构 · 按 → 进入下一页':renderSlide(page).customType==='warmup'?'热身朗读 · 慢读 → 齐读 → 稍微加快 · '+(renderSlide(page+1)&&renderSlide(page+1).customType==='warmup'?'下一步继续热身':'下一步进入课文'):'课程要求已按本课教学大纲更新');step=total=0;document.getElementById('stepAll').disabled=true;document.getElementById('stepReplay').disabled=true;return;}custom.hidden=true;frame.hidden=false;var s=renderSlide(page);if(lesson!==s.lessonId){loadGeneration++;lesson=s.lessonId;ready=false;current=0;step=total=0;gotoSent=false;preview.hidden=false;frame.style.visibility='hidden';loading.hidden=false;label('正在载入本课动画…');frame.src='animations/'+lesson+'.svg'+(lesson==='L08'?'?v=20261116-layout261':'');}else if(current!==s.sourcePage){frame.style.visibility='hidden';preview.hidden=false;loading.hidden=false;gotoSent=false;}apply();updateStatus();}
 function next(){if(policies[desired])return false;if(!ready){label('动画载入中，请稍候…');return true;}send('next');return true;}
 function prev(){if(policies[desired])return false;if(!ready)return true;send('prev');return true;}
-window.addEventListener('message',function(e){var d=e.data;if(e.source!==frame.contentWindow||!d||d.lesson!==lesson)return;if(d.type==='rw:ready'){ready=true;apply();return;}if(d.type==='rw:state'){if(!ready||policies[desired])return;var l=activeLesson();current=d.page;step=d.step||0;total=d.total||0;if(gotoSent&&current!==renderSlide(desired).sourcePage)return;if(!gotoSent&&current!==renderSlide(desired).sourcePage){var globalPage=0;for(var i=0;i<D.slides.length;i++){if(D.slides[i].lessonId===l.id&&D.slides[i].sourcePage===current){globalPage=i+1;break;}}if(globalPage>=1&&globalPage<=D.count&&window.HTDeck)window.HTDeck.go(globalPage);}apply();updateStatus();return;}if(d.type==='rw:error'){label('本页动画暂时出错，请点“重播本页”重试');if(window.HTDeck)window.HTDeck.toast('第 '+desired+' 页动画未能完成，请重播本页。',5000);console.error('Animation page '+desired+': '+d.message);return;}if(d.type==='rw:boundary'){var target=desired+(d.direction<0?-1:1);if(target>=1&&target<=D.count)window.HTDeck.go(target);return;}if(d.type==='rw:key'){document.dispatchEvent(new KeyboardEvent('keydown',{key:d.key,code:d.code,ctrlKey:d.ctrlKey,metaKey:d.metaKey,altKey:d.altKey,shiftKey:d.shiftKey,bubbles:true,cancelable:true}));return;}if(d.type==='rw:wake'&&window.HTDeck)window.HTDeck.wake();});
+window.addEventListener('message',function(e){var d=e.data;if(e.source!==frame.contentWindow||!d||d.lesson!==lesson)return;if(d.type==='rw:ready'){markReady();return;}if(d.type==='rw:state'){if(!ready||policies[desired])return;var l=activeLesson();current=d.page;step=d.step||0;total=d.total||0;if(gotoSent&&current!==renderSlide(desired).sourcePage)return;if(!gotoSent&&current!==renderSlide(desired).sourcePage){var globalPage=0;for(var i=0;i<D.slides.length;i++){if(D.slides[i].lessonId===l.id&&D.slides[i].sourcePage===current){globalPage=i+1;break;}}if(globalPage>=1&&globalPage<=D.count&&window.HTDeck)window.HTDeck.go(globalPage);}apply();updateStatus();return;}if(d.type==='rw:error'){label('本页动画暂时出错，请点“重播本页”重试');if(window.HTDeck)window.HTDeck.toast('第 '+desired+' 页动画未能完成，请重播本页。',5000);console.error('Animation page '+desired+': '+d.message);return;}if(d.type==='rw:boundary'){var target=desired+(d.direction<0?-1:1);if(target>=1&&target<=D.count)window.HTDeck.go(target);return;}if(d.type==='rw:key'){document.dispatchEvent(new KeyboardEvent('keydown',{key:d.key,code:d.code,ctrlKey:d.ctrlKey,metaKey:d.metaKey,altKey:d.altKey,shiftKey:d.shiftKey,bubbles:true,cancelable:true}));return;}if(d.type==='rw:wake'&&window.HTDeck)window.HTDeck.wake();});
 window.RWPlayer={show:show,next:next,prev:prev,media:function(){return mediaLayer.querySelector('video');},position:function(){return {page:desired,step:step,total:total,lesson:lesson};},restoreStep:function(n){if(policies[desired]){pendingRestore=null;return;}pendingRestore=n;apply();},replay:function(){if(ready&&!policies[desired])send('replay');},all:function(){if(ready&&!policies[desired])send('all');}};
 document.getElementById('stepNext').onclick=function(){window.HTDeck.next();};document.getElementById('stepBack').onclick=function(){window.HTDeck.prev();};document.getElementById('stepReplay').onclick=window.RWPlayer.replay;document.getElementById('stepAll').onclick=window.RWPlayer.all;
 })();
