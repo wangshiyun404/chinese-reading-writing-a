@@ -21,8 +21,10 @@ function fixL10Text(){
       doc.fonts.add(face);
       load=face.load();
     }
-    doc.querySelectorAll('.Slide#id3 text,.Slide#id4 text,.Slide#id5 text,.Slide#id6 text').forEach(function(t){
-      t.setAttribute('font-family','"'+family+'", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif');
+    var stack='"'+family+'", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif';
+    function normalize(t){
+      if(t.getAttribute('font-family')===stack)return;
+      t.setAttribute('font-family',stack);
       t.setAttributeNS('http://www.w3.org/XML/1998/namespace','xml:lang','zh-CN');
       t.querySelectorAll('.TextPosition').forEach(function(line){
         // The exporter put every Han character in its own stretched tspan.
@@ -40,7 +42,18 @@ function fixL10Text(){
         span.removeAttribute('textLength');
         span.removeAttribute('lengthAdjust');
       });
-    });
+    }
+    var groups=doc.querySelectorAll('.Slide#id3,.Slide#id4,.Slide#id5,.Slide#id6');
+    function normalizeSlides(){
+      groups.forEach(function(slide){slide.querySelectorAll('text').forEach(normalize);});
+    }
+    normalizeSlides();
+    // LibreOffice may replace animated shapes with copies cached before rw:ready.
+    // Normalize those too, without observing other slides or attribute updates.
+    if(win.MutationObserver){
+      var observer=new win.MutationObserver(normalizeSlides);
+      groups.forEach(function(slide){observer.observe(slide,{childList:true,subtree:true});});
+    }
     return load;
   } catch(e) {
     // Local file previews can restrict iframe DOM access; keep playback.
